@@ -13,6 +13,7 @@ gem 'figaro'
 gem "omniauth-google-oauth2", "~> 0.2.1"
 
 group :development, :test do
+  gem 'rspec-rails'
   gem 'byebug'
 end
 
