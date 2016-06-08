@@ -7,6 +7,4 @@ class Legislator < OpenStruct
     }
   end
 
-
-
 end
