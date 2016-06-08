@@ -11,10 +11,17 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'figaro'
 gem "omniauth-google-oauth2", "~> 0.2.1"
+gem 'faraday'
 
 group :development, :test do
-  gem 'rspec-rails'
   gem 'byebug'
+  gem 'pry-rails'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
