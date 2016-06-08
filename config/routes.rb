@@ -7,6 +7,4 @@ Rails.application.routes.draw do
   resource :home, only: [:show]
 
   root to: "home#show"
-
-  resources :legislators, only: [:index]
 end

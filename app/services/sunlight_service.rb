@@ -5,15 +5,15 @@ class SunlightService
   end
 
   def legislators
-  parse(get_legislators).map { |raw_legislator|
+  parse(get_senators).map { |raw_legislator|
     OpenStruct.new(raw_legislator)
   }
 end
 
 private
 
-  def get_legislators
-    @connection.get "/legislators?apikey=#{ENV["SUNLIGHT_KEY"]}"
+  def get_senators
+    @connection.get "/legislators?chamber=senate&per_page=all&apikey=#{ENV["SUNLIGHT_KEY"]}"
   end
 
   def parse(response)
