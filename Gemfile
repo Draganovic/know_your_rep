@@ -16,6 +16,7 @@ gem 'faraday'
 group :development, :test do
   gem 'byebug'
   gem 'pry-rails'
+  gem 'capybara'
 end
 
 group :test do
