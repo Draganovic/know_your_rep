@@ -3,11 +3,11 @@ require 'rails_helper'
 
 RSpec.describe Senator do
   it "returns all senators" do
-  VCR.use_cassette("senator#collection") do
-    senators = Senator.collection
+  VCR.use_cassette("senator#all") do
+    senators = Senator.all
     senator = senators.first
 
-    expect(senators.count).to eq(20)
+    expect(senators.count).to eq(100)
 
     end
   end

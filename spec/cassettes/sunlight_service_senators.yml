@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.1.19
       Date:
-      - Wed, 08 Jun 2016 20:27:43 GMT
+      - Sat, 11 Jun 2016 16:19:26 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -1978,5 +1978,5 @@ http_interactions:
         bnQiOjEwMCwicGFnZSI6eyJjb3VudCI6MTAwLCJwZXJfcGFnZSI6bnVsbCwi
         cGFnZSI6bnVsbH19
     http_version: 
-  recorded_at: Wed, 08 Jun 2016 20:27:43 GMT
+  recorded_at: Sat, 11 Jun 2016 16:19:27 GMT
 recorded_with: VCR 3.0.3
