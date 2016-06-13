@@ -19,7 +19,7 @@ class SunlightService
 
   def load_data
     senators.each do |record|
-      name = record[:first_name] + " " + record[:last_name]
+      name = "#{record[:first_name]} #{record[:last_name]}"
        Senator.where(name: name).first_or_create do |senator|
          senator.state_name = record[:state_name]
          senator.save!

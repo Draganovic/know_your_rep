@@ -4,7 +4,7 @@ describe SunlightService do
   it "it returns a list of senators" do
     VCR.use_cassette("sunlight_service#senators") do
     service = SunlightService.new
-    senators = service.senators_hash
+    senators = service.senators
     senator = senators.first
 
     expect(senators.count).to eq(100)

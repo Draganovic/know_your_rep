@@ -1,3 +1,8 @@
 <h1>Home#show</h1>
 <p>Find me in app/views/home/show.html.erb</p>
-<%= link_to "show senator", senator_path %>
+
+<% if current_user %>
+  <%= link_to "Start game", games_path, method: :post%>
+<% else %>
+  <h1>Please sign in to Play</h1>
+<% end %>
