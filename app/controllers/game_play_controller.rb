@@ -18,4 +18,10 @@ class GamePlayController < ApplicationController
     redirect_to game_path(game.id)
   end
 
+  def game_over
+    game = Game.find(params[:game_id])
+    @game_score = game.score
+    redirect_to game_over_path(game_over.id)
+  end
+
 end

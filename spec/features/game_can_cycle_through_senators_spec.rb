@@ -5,8 +5,9 @@ RSpec.feature "senator displays on show" do
     sen = Senator.create(name: "Bob Dole", state_name: "Kansas")
     user = User.new(name: "Beth")
     ApplicationController.any_instance.stubs(:current_user).returns(user)
-    # game = Game.create(score: 0, user_id: user.id)
+
     visit root_path
+
     click_on "Start game"
 
     expect(current_path).to eq game_path(Game.first.id)
@@ -17,15 +18,17 @@ RSpec.feature "senator displays on show" do
 
     click_on "Submit"
 
-    # expect(page).to have_content "Game over. Your score is 0"
+    expect(page).to have_content "Game over. Your score is 0"
   end
 
   scenario "they guess right" do
-    sen = Senator.create(name: "Bob Dole", state_name: "Kansas")
+    sen1 = Senator.create(name: "Bob Dole", state_name: "Kansas")
+    sen2 = Senator.create(name: "Frank Hans", state_name: "Utah")
     user = User.new(name: "Beth")
     ApplicationController.any_instance.stubs(:current_user).returns(user)
-    # game = Game.create(score: 0, user_id: user.id)
+
     visit root_path
+
     click_on "Start game"
 
     expect(current_path).to eq game_path(Game.first.id)
@@ -36,8 +39,10 @@ RSpec.feature "senator displays on show" do
 
     click_on "Submit"
 
-    # expect(page).to have_content "Game over. Your score is 0"
+    expect(page).to have_content "Frank Hans"
+
+    fill_in "State", with: "Colorado"
+
+    expect(page).to have_content "Game over. Your score is 1"
   end
-
-
 end

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'signout', to: 'sessions#destroy', as: 'signout'
   resources :senators, only: [:show]
 
-  resources :game_play, only: [:index]
+  resources :game_play, only: [:index, :game_over]
 
   resources :sessions, only: [:create, :destroy]
   resource :home, only: [:show]
@@ -12,5 +12,6 @@ Rails.application.routes.draw do
 
   resources :games, only: [:create, :show]
 
-  get 'games/game_over', to: 'games#game_over'
+  # get 'games/game_over/:id', to: 'games#game_over', as: 'game_over'
+
 end
