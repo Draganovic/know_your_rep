@@ -21,6 +21,8 @@ group :development, :test do
 end
 
 group :test do
+  gem 'database_cleaner'
+  gem 'mocha'
   gem 'rspec-rails'
   gem 'vcr'
   gem 'webmock'

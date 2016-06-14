@@ -1,2 +1,11 @@
-form with @senator name and text box to guess state
+<!-- <form with @senator name and text box to guess state> -->
 <!-- submit button that passes in game_id, senator_id, guess to /GamePlayController -->
+
+<%= @senator[0].name  %>
+<%=  form_tag "/game_play", method: "get" do %>
+  <%= label_tag(:guess, "State")%>
+  <%= text_field_tag(:guess) %>
+  <%= hidden_field_tag :game_id, @game.id %>
+  <%= hidden_field_tag :senator_id, @senator[0].id %>
+  <%= submit_tag "Submit" %>
+<% end %>
