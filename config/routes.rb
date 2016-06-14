@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   root to: "home#show"
 
   resources :games, only: [:create, :show]
+
+  get 'games/game_over', to: 'games#game_over'
 end

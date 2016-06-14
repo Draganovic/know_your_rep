@@ -5,4 +5,5 @@ class Game <ActiveRecord::Base
     @used_senators ||= []
   end
 
+
 end

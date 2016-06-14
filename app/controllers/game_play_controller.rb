@@ -8,8 +8,11 @@ class GamePlayController < ApplicationController
     #move to poro or as a module on game class
     if senator.state_name == params[:guess]
       # correct!
+      game.score += 1
+      game.save
     else
       # incorrect!
+      redirect_to game_over_path
     end
     game.used_senators << senator.id
     redirect_to game_path(game.id)

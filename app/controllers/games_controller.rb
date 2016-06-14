@@ -17,4 +17,8 @@ class GamesController < ApplicationController
     end
   end
 
+  def game_over
+    @game_score = Game.score.last
+  end
+
 end
