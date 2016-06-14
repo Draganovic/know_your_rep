@@ -17,9 +17,12 @@ group :development, :test do
   gem 'byebug'
   gem 'pry-rails'
   gem 'capybara'
+  gem 'launchy'
 end
 
 group :test do
+  gem 'database_cleaner'
+  gem 'mocha'
   gem 'rspec-rails'
   gem 'vcr'
   gem 'webmock'

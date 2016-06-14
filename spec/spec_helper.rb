@@ -14,7 +14,12 @@
 #
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.
-#
+#gem 'mocha'
+
+# Within `spec/spec_helper.rb`
+RSpec.configure do |config|
+  config.mock_with :mocha
+end
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'vcr'
 
