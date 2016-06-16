@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.1.19
       Date:
-      - Sat, 11 Jun 2016 22:34:02 GMT
+      - Wed, 15 Jun 2016 01:44:16 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -1978,7 +1978,7 @@ http_interactions:
         bnQiOjEwMCwicGFnZSI6eyJjb3VudCI6MTAwLCJwZXJfcGFnZSI6bnVsbCwi
         cGFnZSI6bnVsbH19
     http_version: 
-  recorded_at: Sat, 11 Jun 2016 22:34:02 GMT
+  recorded_at: Wed, 15 Jun 2016 01:44:17 GMT
 - request:
     method: get
     uri: https://congress.api.sunlightfoundation.com/legislators?apikey=414d8b9dc2d347f3b60d17257ac02bcb&chamber=senate&per_page=all
@@ -2000,7 +2000,7 @@ http_interactions:
       Server:
       - nginx/1.1.19
       Date:
-      - Sat, 11 Jun 2016 22:34:04 GMT
+      - Wed, 15 Jun 2016 01:44:20 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -3957,5 +3957,5 @@ http_interactions:
         bnQiOjEwMCwicGFnZSI6eyJjb3VudCI6MTAwLCJwZXJfcGFnZSI6bnVsbCwi
         cGFnZSI6bnVsbH19
     http_version: 
-  recorded_at: Sat, 11 Jun 2016 22:34:04 GMT
+  recorded_at: Wed, 15 Jun 2016 01:44:21 GMT
 recorded_with: VCR 3.0.3

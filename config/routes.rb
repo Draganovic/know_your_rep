@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   resource :home, only: [:show]
   root to: "home#show"
 
+  get 'games/game_over', to: 'games#game_over', as: 'game_over'
+
   resources :games, only: [:create, :show]
 
-  get 'games/game_over', to: 'games#game_over'
+
 end
