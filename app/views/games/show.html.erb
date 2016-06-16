@@ -2,12 +2,10 @@
 <!-- submit button that passes in game_id, senator_id, guess to /GamePlayController -->
 
 <%= @senator.name  %>
+<%= form_tag do %>
   <%= label_tag(:guess, "State")%>
   <%= text_field_tag(:guess) %>
-  <%= hidden_field_tag :game_id, @game.id %>
+  <%= hidden_field_tag :game_id, current_game.id %>
   <%= hidden_field_tag :senator_id, @senator.id %>
   <%= submit_tag "Submit" %>
-
-
-
-<%= "Game over. Your score is #{@game.score}" %>
+<% end %>
